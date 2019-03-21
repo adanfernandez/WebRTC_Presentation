@@ -7,6 +7,354 @@ export { default as theme } from './theme'
   <title>Arquitectura del software: WebRTC</title>
 </Head>
 
-# Primera diapositiva
+import Box from 'superbox'
+
+
+
+# Arquitectura del Software: Web RTC
+
+<Box
+  bg='black'
+  fontSize={35}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+Adán Fernández Sánchez - UO251162
+
+Laura Marcela Sánchez Peláez - UO244741
+
+Raúl García Arenas - UO257275
+
+Yago García Rodríguez - UO257178
+
+</Box>
 
 ---
+
+# ¿Qué es la Web RTC?
+
+---
+
+<Box
+  bg='black'
+  fontSize={45}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Proyecto de código abierto
+- Intercambio de información sin plugins
+- Escritura de aplicaciones multimedia enriquecidas y en tiempo real​
+
+</Box>
+
+---
+
+<Image src="images/Diapositiva3.PNG" size="70%" />
+
+---
+
+<Image src="images/Diapositiva4.PNG" size="70%" />
+
+---
+
+# Conexión
+
+- La conexión inicial entre pares se realiza por un servidor de aplicaciones.​
+
+- Traducción de direcciones de red NAT.​
+
+
+---
+
+<Image src="images/Diapositiva6.PNG" size="50%" />
+
+---
+
+# Señalización
+
+<Box
+  bg='black'
+  fontSize={50}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+Los pares se envían  mensajes de control entre sí para establecer protocolo, canal y método de comunicación
+
+</Box>
+
+---
+
+<Image src="images/Diapositiva8.PNG" size="50%" />
+
+---
+
+# Seguridad
+
+<Box
+  bg='black'
+  fontSize={50}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Se van enontrando vulnerabilidades con el paso del tiempo
+- Sin instalaciones
+- Comunicaciones cifradas
+
+</Box>
+
+---
+
+# Cifrado de mensajes
+
+---
+
+
+# DTLS
+
+<Box
+  bg='black'
+  fontSize={50}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Protocolo de seguridad de transporte de datagramas
+- Basado en TLS
+- Evolución del SSL
+- Canal seguro donde se negocia la criptografía entre cliente-servidor
+
+</Box>
+
+---
+
+# SRTP
+
+<Box
+  bg='black'
+  fontSize={50}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Secure Real Time Protocol
+- Define un perfil RTP
+- Usado por ejemplo en el cifrado de llamadas de voz
+
+</Box>
+
+---
+
+# APIs utilizadas
+
+<Box
+  bg='black'
+  fontSize={50}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- GetUserMedia(): captura de pantalla y vídeo
+- MediaRecorder: grabar audio y vídeo
+- RTCPeerConnection: transmisión de audio y video entre usuarios
+- RTCDataChannel: transmisión de datos entre usuarios
+
+</Box>
+
+
+---
+
+<Image src="images/Diapositiva14.PNG" size="50%" />
+
+---
+
+# Seguridad: puntos a mejorar
+
+<Box
+  bg='black'
+  fontSize={60}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Man in the middle
+- Dirección IP real
+- Servidores proxy o VPN
+
+</Box>
+
+---
+
+# Se puede solucionar
+
+<Box
+  bg='black'
+  fontSize={35}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Desactivar WebRTC
+- Extensiones para bloquear la vulnerabilidad
+- VPN con privacidad
+- Tor Browser que desactiva WebRTC
+
+</Box>
+
+## Comandos para deshabilitar: 
+
+<Box
+  bg='black'
+  fontSize={30}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Chrome: // flags / # disable-webrtc
+- Mozilla: media.peerconnection.enabled a false
+
+</Box>
+
+---
+
+# Ventajas de uso
+
+<Box
+  bg='black'
+  fontSize={40}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Agilidad de implantación
+- Sin software/pluggins adicionales
+- Conexiones más rápidas
+- No hay localización para las comunicaciones
+- Baja latencia de consumo de banda ancha
+- Menor coste
+
+</Box>
+
+---
+
+# Alternativas
+
+<Box
+  bg='black'
+  fontSize={60}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Flash
+- Media source extension
+- Plugin del navegador
+
+</Box>
+
+---
+
+# Ejecución
+
+---
+
+<Image src="images/Diapositiva19.PNG" size="50%" />
+
+---
+
+<Image src="images/Diapositiva20.PNG" size="50%" />
+
+---
+
+<Image src="images/Diapositiva21.PNG" size="50%" />
+
+---
+
+<Image src="images/Diapositiva22.PNG" size="50%" />
+
+---
+
+<Image src="images/Diapositiva23.PNG" size="50%" />
+
+---
+
+# Conclusiones
+
+<Box
+  bg='black'
+  fontSize={40}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+- Integración en un navegador compatible con la especificación HTML5 sin necesidad de instalar un Software propietario.
+- Desde el punto de vista del programador, web-RTC es una completa y sólida base  sobre la que construir un proyecto de comunicación RTC, con las garantías de una API bien documentada y respaldada por importantes entidades tecnológicas como son el W3C, IETF y Google.​
+- Además es de código libre en todos sus niveles, a diferencia de otros sistemas como los plugins flash de Adobe, u otros sistemas basados en codecs de audio/video propietarios.​
+- El principal inconveniente al que se enfrenta esta API es la limitada compatibilidad con los navegadores web existentes. Si bien es preciso recordar que se trata aún de un proyecto en desarrollo.​
+
+</Box>
+
+---
+
+# Bibliografía (I)
+
+- https://codelabs.developers.google.com/codelabs/webrtc-web/#0 
+
+- https://www.3cx.es/webrtc/que-es-webrtc/ 
+
+- https://developer.mozilla.org/es/docs/Web/API/WebRTC_API 
+
+- https://developer.mozilla.org/es/docs/WebRTC/Introduction 
+
+- https://dvbs.com/que-es-webrtc/ 
+
+- https://searchdatacenter.techtarget.com/es/respuesta/Por-que-deberia-mejorar-la-seguridad-de-WebRTC 
+
+- https://www.eoi.es/blogs/redinnovacionEOI/2015/08/28/webrtc-la-revolucion-de-las-web-2/ 
+
+---
+
+# Bibliografía (II)
+
+- https://es.wikipedia.org/wiki/WebRTC 
+
+- https://www.tadgroup.com/blog/post/webrtc-vulnerability-or-functionality 
+
+- https://www.html5rocks.com/en/tutorials/webrtc/infrastructure/ 
+
+- https://www.3cx.es/blog/lograra-webrtc-reemplazar-al-sistema-voip-conoce-sus-ventajas-y-desventajas/ 
+
+- https://www.3cx.es/whitepapers/webrtc/ 
+
+- https://sites.google.com/site/investigacionwebrtc/conclusiones 
+
+---
+<Box
+  bg='black'
+  fontSize={300}
+  css={{
+    fontWeight:'bold'
+  }}
+>
+
+:question:
+
+
+</Box>
+
